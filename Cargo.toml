@@ -1,0 +1,19 @@
+[package]
+name = "test_open_files"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+path = "src/server.rs"
+name = "test_server"
+
+[[bin]]
+path = "src/client.rs"
+name = "test_client"
+
+[dependencies]
+tokio = {version="1.18", features = ["full", "tracing"]}
+console-subscriber = "0.1"
+tracing = "0.1"
+bytes = "1.1"
+zeromq = "0.3"
